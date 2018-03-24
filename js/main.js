@@ -70,7 +70,7 @@ var primerSel = ""
 var segundoSel = ""
 var selPrevio = null
 var eliminados = 0
-var segundos = 70
+var segundos = 120
 
 var start = document.getElementById("start")
 var reloj = document.getElementById("reloj")
@@ -143,7 +143,7 @@ function startGame(){
 // Función para ejecutar la lógica de partida perdida
 
 function gameOver(){
-    segundos = 71
+    segundos = 121
     song.pause()
     song.currentTime = 0
     fail.play()
@@ -230,7 +230,7 @@ var contEliminados = function (){
         winner.classList.add("open")
         win.currentTime = 0
         win.play()
-        segundos = 70
+        segundos = 120
         song.pause()
         song.currentTime = 0
         rejilla.classList.add("out")
