@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #6589f9;
+    font-family: 'Bowlby One SC', cursive;
+}
+
+.cabecera {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+button {
+    border: 7px solid #ffd700;
+    background-color: #6589f9;
+    color: gold;
+    font-size: 40px;
+    padding: 10px 20px;
+    border-radius: 15px;
+    font-family: 'Bowlby One SC', cursive;
+    z-index: 30;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.anverso:hover {
+    cursor: pointer;
+}
+
+#reloj {
+    color: gold;
+    font-size: 40px;
+}
+
+.rejilla {
+    margin: -1000px auto;
+    max-width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    transition: all 1000ms ease-in-out;
+}
+
+.rejilla.start {
+    margin: 0 auto;
+}
+
+.rejilla.out {
+    margin: -1000px auto;
+}
+
+#game-over {
+    display: none;
+    opacity: 0;
+    text-align: center;
+    position: fixed;
+    font-size: 160px;
+    color: red;
+    text-shadow: 8px 8px 8px rgb(211, 211, 211);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 1.5s all ease-in-out;
+    z-index: -5
+}
+
+.tarjeta {
+    height: 150px;
+    width: 150px;
+    margin: 10px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: all 300ms linear;
+}
+
+.anverso {
+    height: 150px;
+    width: 150px;
+    background-image: url("../img/LogoGemaStarlight.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.reverso {
+    height: 150px;
+    width: 150px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: rotateY(180deg);
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.seleccionado {
+    transform: rotateY(180deg)
+}
+
+.eliminado .anverso {
+    background-image: none !important;
+}
+
+#winner {
+    font-size: 160px;
+    color: gold;
+    text-shadow: 8px 8px 8px white;
+    position: fixed;
+    top: -100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    transition: all 500ms ease-in-out;
+}
+
+#winner.open {
+    top: 50%;
+}
